@@ -1,0 +1,32 @@
+
+
+Name: <%= @attraction.name %>
+
+<br><br>
+
+
+Ticket Requirement:  <%= @attraction.tickets %>
+
+<br><br>
+
+Height Requirement:  <%= @attraction.min_height %>
+
+<br><br>
+
+Nausea Rating:  <%= @attraction.nausea_rating %>
+
+<br><br>
+
+Happiness Rating:  <%= @attraction.happiness_rating %>
+
+<br><br>
+
+<% if current_user.admin %>
+
+<%= link_to "Edit #{@attraction.name}", edit_attraction_path(@attraction) %>
+
+<% end  %>
+
+
+
+

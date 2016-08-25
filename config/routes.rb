@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
-  get '/logout', to: 'sessions#destroy'
+  post '/logout', to: 'sessions#destroy'
+  get '/', to: 'sessions#home'
+  post '/new_ride', to: 'attractions#new_ride', as: 'new_ride'
+
 
 
 

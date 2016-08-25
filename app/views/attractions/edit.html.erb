@@ -1,0 +1,38 @@
+
+<%= form_for @attraction do |f| %>
+
+Name: <%= @attraction.name %>
+<br> 
+New Name: <%= f.text_field :name %>
+
+<br><br>
+
+
+Ticket Requirement:  <%= @attraction.tickets %>
+<br> 
+New Ticket Requirement: <%= f.text_field :tickets %>
+
+<br><br>
+
+Height Requirement:  <%= @attraction.min_height %>
+<br> 
+New Height Requirement: <%= f.text_field :min_height %>
+
+<br><br>
+
+Nausea Rating:  <%= @attraction.nausea_rating %>
+<br> 
+New Nausea Rating: <%= f.text_field :nausea_rating %>
+
+<br><br>
+
+Happiness Rating:  <%= @attraction.happiness_rating %>
+<br> 
+New Happiness Rating: <%= f.text_field :happiness_rating %>
+
+
+<br><br>
+
+<%= f.submit  %>
+
+<% end  %>

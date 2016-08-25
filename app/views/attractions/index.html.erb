@@ -1,0 +1,20 @@
+
+
+<% @attractions.each do |atrxn| %>
+
+<br><br>
+
+Name: <%= atrxn.name %>
+
+<br><br>
+
+Cost:  <%= atrxn.tickets %> Ticket(s)
+
+<br><br>
+
+<%= link_to atrxn.name, attraction_path(atrxn) %>
+
+<br><br><br><br><br><br>
+
+
+ <% end %>

@@ -6,6 +6,12 @@ def new
 end
 
 def show
+  @user = User.find(params[:id])
+  if @user.happiness > 4
+    @mood = "happy"
+  else 
+    @mood = "sad"
+  end
 end
 
 def index
@@ -15,9 +21,7 @@ def update
 end
 
 def create
-
   @user = User.new(user_params)
-   binding.pry
   if @user.save
     session[:user_id] = @user.id
     redirect_to user_path(@user)

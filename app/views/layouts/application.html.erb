@@ -20,6 +20,24 @@
             <span class="icon-bar"></span>
           </button>
         <a class="navbar-brand" href="<%= '/' %>"/>Home</a>
+        
+
+
+       <% if current_user %>
+       <a class="navbar-brand" />Logged in as <%=current_user.name%></a>
+
+       <%= link_to "Logout", logout_path, method: 'post', class: "navbar-brand" %>
+
+       <% else %>
+       <a class="navbar-brand" href="<%= login_path %>"/>Sign in</a>
+       <a class="navbar-brand" href="<%= new_user_path %>"/>Sign up</a>
+       <% end %>
+
+       <a class="navbar-brand" href="<%= attractions_path %>"/>Attractions</a>
+        
+
+
+
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
